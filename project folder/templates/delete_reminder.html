@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delete Reminder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Delete Reminder</h2>
+  <form action="/delete-reminder" method="POST">
+    <label for="deleteDate">Select Date:</label>
+    <input type="date" id="deleteDate" name="deleteDate" required>
+
+    <label for="deleteSubject">Select Subject:</label>
+    <select id="deleteSubject" name="deleteSubject">
+      <option value="subject1">Subject 1</option>
+      <option value="subject2">Subject 2</option>
+      <!-- Add other subjects as needed -->
+    </select>
+
+    <label for="deleteReminder">Reminders:</label>
+    <select id="deleteReminder" name="deleteReminder">
+      <option value="reminder1">Reminder 1 - Description...</option>
+      <option value="reminder2">Reminder 2 - Description...</option>
+      <!-- Populate reminders dynamically based on the selected subject/date -->
+    </select>
+
+    <label for="deleteDescription">Description:</label>
+    <textarea id="deleteDescription" name="deleteDescription" rows="4" cols="50" readonly></textarea>
+
+    <button type="submit">Confirm</button>
+    <a href="/home">Back</a>
+    <a href="/logout">Logout</a>
+  </form>
+</body>
+</html>

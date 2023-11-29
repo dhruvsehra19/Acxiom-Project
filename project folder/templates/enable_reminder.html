@@ -1,0 +1,54 @@
+Enable reminder 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enable Reminder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Enable Reminder</h2>
+  <form action="/enable-reminder" method="POST">
+    <label for="enableDate">Select Date:</label>
+    <input type="date" id="enableDate" name="enableDate" required>
+
+    <label for="enableSubject">Select Subject:</label>
+    <select id="enableSubject" name="enableSubject">
+      <option value="subject1">Subject 1</option>
+      <option value="subject2">Subject 2</option>
+      <!-- Add other subjects as needed -->
+    </select>
+
+    <label for="enableReminder">Reminders:</label>
+    <select id="enableReminder" name="enableReminder">
+      <option value="reminder1">Reminder 1 - Description...</option>
+      <option value="reminder2">Reminder 2 - Description...</option>
+      <!-- Populate reminders dynamically based on the selected subject/date -->
+    </select>
+
+    <label for="enableDescription">Description:</label>
+    <textarea id="enableDescription" name="enableDescription" rows="4" cols="50"></textarea>
+
+    <label for="enableEmail">Email Address:</label>
+    <input type="email" id="enableEmail" name="enableEmail">
+
+    <label for="enableContact">Contact No:</label>
+    <input type="tel" id="enableContact" name="enableContact">
+
+    <label for="enableSMS">SMS No:</label>
+    <input type="tel" id="enableSMS" name="enableSMS">
+
+    <p>Recur for Next:</p>
+    <input type="checkbox" id="enableSevenDays" name="enableRecur" value="7">
+    <label for="enableSevenDays">7 Days</label>
+    <!-- Add other recurrence options as checkboxes -->
+
+    <button type="submit">Confirm</button>
+    <a href="/home">Back</a>
+    <a href="/logout">Logout</a>
+  </form>
+</body>
+</html>

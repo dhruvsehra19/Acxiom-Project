@@ -1,0 +1,15 @@
+
+<!-- Similar structure for other HTML files -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to the Reminder Application</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h2>Welcome to the Reminder Application, {{ username }}</h2>
+  <!-- Other content for the home page -->
+  <a href="/logout">Logout</a>
+</body>
+</html>
